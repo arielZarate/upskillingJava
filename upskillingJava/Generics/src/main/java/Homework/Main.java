@@ -3,7 +3,7 @@ package Homework;
 import Homework.repositories.UserRepository;
 import Homework.repositories.entitie.EntityUser;
 import Homework.repositories.mapper.EntityUserMapper;
-import Homework.User;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class Main {
         Integer id1 = userRepo.create(EntityUserMapper.toEntity(user1));
         Integer id2 = userRepo.create(EntityUserMapper.toEntity(user2));
         Integer id3 = userRepo.create(EntityUserMapper.toEntity(user3));
-        
+
         System.out.println("Creados usuarios con IDs: " + id1 + ", " + id2 + ", " + id3);
 
         System.out.println("\n--- READ (findById) ---");
@@ -33,10 +33,10 @@ public class Main {
         System.out.println("Total usuarios: " + all.size());
 
         System.out.println("\n--- WILDCARDS: copyFrom con ? extends ---");
-        
+
         List<EntityUser> listaOriginal = userRepo.findAll();
         List<EntityUser> listaCopia = new ArrayList<>();
-        
+
         userRepo.copyFrom(listaOriginal, listaCopia);
         System.out.println("Elementos copiados: " + listaCopia.size());
 
