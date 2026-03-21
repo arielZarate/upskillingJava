@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FX_AMB.abmController">
+   <children>
+      <Button fx:id="id_add" layoutX="28.0" layoutY="188.0" mnemonicParsing="false" onAction="#btn_add" prefHeight="25.0" prefWidth="111.0" text="ADD" />
+      <Button fx:id="id_delete" layoutX="164.0" layoutY="188.0" mnemonicParsing="false" onAction="#btn_delete" prefHeight="25.0" prefWidth="111.0" text="DELETE" />
+      <HBox layoutX="28.0" layoutY="221.0">
+         <children>
+            <TableView fx:id="tbl_personas" prefHeight="154.0" prefWidth="295.0" />
+            <ListView fx:id="lista" onEditStart="#lst_lista" prefHeight="154.0" prefWidth="149.0" />
+         </children>
+
+
+
+
+
+      </HBox>
+      <Button fx:id="id_update" layoutX="315.0" layoutY="188.0" mnemonicParsing="false" onAction="#btn_update" prefHeight="25.0" prefWidth="137.0" text="UPDATE" />
+      <Pane layoutX="28.0" layoutY="54.0" prefHeight="119.0" prefWidth="355.0">
+         <children>
+            <Label layoutX="14.0" layoutY="27.0" text="Dni:" />
+            <Label layoutX="13.0" layoutY="55.0" text="Nombre:" />
+            <Label layoutX="14.0" layoutY="85.0" prefHeight="17.0" prefWidth="37.0" text="Edad: " />
+            <TextField fx:id="dni" layoutX="43.0" layoutY="23.0" onAction="#txt_dni" />
+            <TextField fx:id="nombre" layoutX="66.0" layoutY="51.0" onAction="#txt_nombre" prefHeight="25.0" prefWidth="277.0" />
+            <TextField fx:id="edad" layoutX="51.0" layoutY="81.0" onAction="#txt_edad" prefHeight="25.0" prefWidth="137.0" />
+         </children>
+      </Pane>
+      <Label layoutX="99.0" layoutY="28.0" prefHeight="17.0" prefWidth="167.0" text="ABM PERSONAS TSB" />
+   </children>
+</Pane>

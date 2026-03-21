@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0c314c2-c251-430a-9065-c32d4b292426" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos06/src/main/java/SimpleList05/clases/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosPracticos06/src/main/java/SimpleList05/clases/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos06/target/classes/Semana06/Principal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos06/target/classes/Semana06/data/lists/GenericList$ListIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos06/target/classes/Semana06/data/lists/GenericList$Nodo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos06/target/classes/Semana06/data/lists/GenericList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos06/target/classes/SimpleList05/clases/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosPracticos06/target/classes/SimpleList05/clases/Principal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ArrayListGenerico01/Principal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ArrayListGenerico01/TSBArrayList$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ArrayListGenerico01/TSBArrayList$TSBArrayListIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ArrayListGenerico01/TSBArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/CalendarioYFechas/CalendarioMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/CalendarioYFechas/ClaseOrdenada.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ClasesGenericasCreadas/ArrayListPropio$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ClasesGenericasCreadas/ArrayListPropio$ArrayListPropioIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ClasesGenericasCreadas/ArrayListPropio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ClasesGenericasCreadas/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ClasesGenericasCreadas/SimpleList$SimpleListIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ClasesGenericasCreadas/SimpleList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/ClasesGenericasCreadas/TestIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/SalaReuniones/ArrayListPropio$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/SalaReuniones/ArrayListPropio$ArrayListPropioIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/SalaReuniones/ArrayListPropio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/SalaReuniones/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/SalaReuniones/Persona.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/SalaReuniones/Reunion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/SalaReuniones/Sala.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/Serializable01/Persona.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/Serializable01/Principal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/Serializable01/TSBNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/Serializable01/TSBSimpleList$SimpleListIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/Serializable01/TSBSimpleList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/Serializable01/TSBSimpleListIOException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/Serializable01/TSBSimpleListReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/${project.build.directory}/classes/Serializable01/TSBSimpleListWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/src/main/java/CalendarioYFechas/ClaseOrdenada.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosPracticos07/src/main/java/CalendarioYFechas/ClaseOrdenada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/src/main/java/SalaReuniones/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosPracticos07/src/main/java/SalaReuniones/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosPracticos07/src/main/java/SalaReuniones/Reunion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosPracticos07/src/main/java/SalaReuniones/Reunion.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1xoVtdc4ovFCKN9jpqAcQqLMWVr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EjerciciosPracticos05" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programacion\Java-TSB\JavaTSB\EjerciciosPracticos04\src\main\java\ProcesosBasicosArreglo" />
+      <recent name="D:\Programacion\JavaTSB\EjerciciosPracticos04" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Principal (3)">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProcesosBasicosArreglo.Main" />
+      <module name="EjerciciosPracticos04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProcesosBasicosArreglo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Principal (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="expresiones.Principal" />
+      <module name="EjerciciosPracticos04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="expresiones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Principal (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MunicipioAmpliado.Principal" />
+      <module name="EjerciciosPracticos04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MunicipioAmpliado.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Principal (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Comuna.Principal" />
+      <module name="EjerciciosPracticos04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Comuna.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="polimorfismo.Principal" />
+      <module name="EjerciciosPracticos04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="polimorfismo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Principal (3)" />
+        <item itemvalue="Application.Principal (2)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Principal (1)" />
+        <item itemvalue="Application.Principal" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0c314c2-c251-430a-9065-c32d4b292426" name="Changes" comment="" />
+      <created>1631021643530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631021643530</updated>
+      <workItem from="1632832793886" duration="1999000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

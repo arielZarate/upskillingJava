@@ -1,0 +1,28 @@
+
+  Nota:
+       Las soluciones a estos problemas no necesariamente requieren el uso de herencia,
+       polimorfismo y otros fundamentos de la POO que se vieron en las primeras semanas
+       de cursado, pero sí sugerimos que tengan mucho cuidado con dos elementos:
+        El primero es el volumen de datos a procesar. El arreglo de entrada tiene diez millones
+        de componentes, y si aplican algún algoritmo demasiado inocente incluso para cumplir
+        un objetivo muy simple, los tiempos de demora serán notables o decididamente inaceptables...
+        El segundo es manejar con cuidado la conversión de tipos
+        o casting cuando apliquen distintas operaciones.
+        Por ejemplo, cuando sumen dos o más números grandes de tipo int,
+        el resultado podría desbordar el rango de valores aceptado para una variable int...
+         y Java no les avisa de eso... No se confíen...
+
+         Idea general: se provee a los alumnos un archivo de texto llamado lote01.txt
+         (que puede descargar desde aquí) el cual contiene 10000000 (diez millones) de números
+         aleatoriamente generados (y sus valores individuales pueden estar a su vez en el rango
+         entre 1 y 10000000), a razón de uno por línea.
+         Se pide tomar ese archivo, con los números que contiene crear un arreglo,
+         y programar una secuencia de algoritmos simples que procesen el arreglo:
+         buscar el primer número primo en el arreglo,
+         calcular la mediana del arreglo,
+         calcular el promedio del arreglo,
+         buscar un grupo de ocho números en el arreglo, y
+         buscar el mayor de los números contenidos en el arreglo.
+          Los detalles están disponibles dentro del cuestionario que soporta a
+          este desafío, en el enunciado de cada consigna.
+

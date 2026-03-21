@@ -19,14 +19,27 @@ import java.util.List;
  */
 public class Utilidades {
 
-    public void imprimirElementos(List<?> lista) {
+    public static void imprimirElementos(List<?> lista) {
 
         lista.forEach(System.out::println);
     }
 
-    public <T> void copiarElementos(List<? extends T> origen, List<? super T> destino) {
+    public static <T> void copiarElementos(List<? extends T> origen, List<? super T> destino) {
         for (T elemento : origen) {
             destino.add(elemento);
+        }
+    }
+
+    public static <T> T obtenerElemento(List<T> lista, int indice) {
+        if (indice < 0 || indice >= lista.size()) {
+            throw new IndexOutOfBoundsException("Indice fuera de rango");
+        }
+        return lista.get(indice);
+    }
+
+    public static <T> void agregarSiNulo(List<T> lista, T elemento) {
+        if (elemento == null) {
+            lista.add(elemento);
         }
     }
 

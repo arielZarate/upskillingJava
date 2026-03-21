@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="drivers">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/3-JDBC/02-CodigoFuente/drivers/ojdbc6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3-JDBC/02-CodigoFuente/drivers/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3-JDBC/02-CodigoFuente/drivers/mysql-driver.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3-JDBC/02-CodigoFuente/drivers/commons-pool2-2.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3-JDBC/02-CodigoFuente/drivers/commons-dbcp2-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3-JDBC/02-CodigoFuente/drivers/commons-logging-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SgaMysql2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/3-JDBC/02-CodigoFuente/drivers/Leccion10/SgaMysql.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="btnCargar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.leerarchivotextojavafx.HelloController">
+   <children>
+      <ComboBox fx:id="combo" onAction="#cbxCombo" prefHeight="40.0" prefWidth="393.0" />
+      <HBox prefHeight="174.0" prefWidth="387.0">
+         <children>
+            <ListView fx:id="lista" prefHeight="316.0" prefWidth="164.0" />
+            <TableView fx:id="table" prefHeight="316.0" prefWidth="238.0">
+              <columns>
+                <TableColumn prefWidth="106.0" text="C1" />
+                <TableColumn prefWidth="79.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <Button fx:id="cargar" mnemonicParsing="false" onAction="#btnCargar" text="Cargar" />
+   </children>
+</VBox>

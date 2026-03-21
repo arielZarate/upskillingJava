@@ -1,0 +1,22 @@
+body { 
+    background: black;
+    color: #FF9900;
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 14px; 
+    line-height: 24px; 
+    margin: 0 0 24px; 
+    text-align: justify; 
+    text-justify: inter-word; 
+}
+
+h1 {  
+    color: #FF5A09; 
+    font-size: 25px; 
+}
+
+.boton{
+    background: #F95700;
+    padding: 4px 10px;
+    color: #FFF;
+    border: #C30 1px solid;
+}

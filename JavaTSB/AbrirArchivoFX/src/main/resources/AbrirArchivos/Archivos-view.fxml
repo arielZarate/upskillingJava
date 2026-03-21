@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AbrirArchivos.ArchivosController">
+   <children>
+      <Button fx:id="btnBuscar" layoutX="159.0" layoutY="63.0" mnemonicParsing="false" onAction="#BuscarArchivo" prefHeight="25.0" prefWidth="182.0" text="Buscar ..." />
+      <Label layoutX="196.0" layoutY="20.0" prefHeight="55.0" prefWidth="145.0" text="Selector de Archivos" textFill="#bf3131">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="99.0" prefHeight="20.0" prefWidth="111.0" text="Path Cargado : ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPath" layoutX="136.0" layoutY="94.0" prefHeight="31.0" prefWidth="324.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="177.0" prefHeight="20.0" prefWidth="152.0" text="Ejecutar Aplicacion ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCarga" layoutX="204.0" layoutY="175.0" mnemonicParsing="false" onAction="#CargarDatos" prefHeight="25.0" prefWidth="129.0" text="Iniciar Carga " />
+   </children>
+</Pane>

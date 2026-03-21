@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!--
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fx.calculadora.CalculadoraController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="welcomeText"/>
+    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+</VBox>
+-->
+
+<Pane fx:id="idPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.calculadora.CalculadoraController">
+   <children>
+      <TextField fx:id="idpantalla" alignment="CENTER_RIGHT" layoutX="33.0" layoutY="20.0" prefHeight="45.0" prefWidth="216.0" promptText="0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></TextField>
+      <Button fx:id="siete" layoutX="34.0" layoutY="126.0" mnemonicParsing="false" onAction="#btn7" prefHeight="45.0" prefWidth="44.0" text="7" />
+      <Button fx:id="ocho" layoutX="90.0" layoutY="126.0" mnemonicParsing="false" onAction="#btn8" prefHeight="45.0" prefWidth="44.0" text="8" />
+      <Button fx:id="nueve" layoutX="146.0" layoutY="126.0" mnemonicParsing="false" onAction="#btn9" prefHeight="45.0" prefWidth="44.0" text="9" />
+      <Button fx:id="multi" layoutX="207.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnmulti" prefHeight="45.0" prefWidth="44.0" text="x">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="cuatro" layoutX="34.0" layoutY="184.0" mnemonicParsing="false" onAction="#btn4" prefHeight="45.0" prefWidth="44.0" text="4" />
+      <Button fx:id="cinco" layoutX="90.0" layoutY="184.0" mnemonicParsing="false" onAction="#btn5" prefHeight="45.0" prefWidth="44.0" text="5" />
+      <Button fx:id="seis" layoutX="146.0" layoutY="184.0" mnemonicParsing="false" onAction="#btn6" prefHeight="45.0" prefWidth="44.0" text="6" />
+      <Button fx:id="divide" layoutX="207.0" layoutY="245.0" mnemonicParsing="false" onAction="#btndividi" prefHeight="45.0" prefWidth="44.0" text="/">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="uno" layoutX="34.0" layoutY="245.0" mnemonicParsing="false" onAction="#btn1" prefHeight="45.0" prefWidth="44.0" text="1" />
+      <Button fx:id="dos" layoutX="90.0" layoutY="245.0" mnemonicParsing="false" onAction="#btn2" prefHeight="45.0" prefWidth="44.0" text="2" />
+      <Button fx:id="tres" layoutX="146.0" layoutY="245.0" mnemonicParsing="false" onAction="#btn3" prefHeight="45.0" prefWidth="44.0" text="3" />
+      <Button fx:id="suma" layoutX="207.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnsuma" prefHeight="45.0" prefWidth="44.0" text="+">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="igual" layoutX="206.0" layoutY="308.0" mnemonicParsing="false" onAction="#btnIgual" prefHeight="45.0" prefWidth="44.0" text="=">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="cero" layoutX="34.0" layoutY="308.0" mnemonicParsing="false" onAction="#btn0" prefHeight="45.0" prefWidth="44.0" text="0" />
+      <Button fx:id="resta" layoutX="207.0" layoutY="184.0" mnemonicParsing="false" onAction="#btnresta" prefHeight="45.0" prefWidth="44.0" text="-">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="porcentaje" layoutX="146.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnPorcentaje" prefHeight="45.0" prefWidth="44.0" text="\%">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="punto" layoutX="90.0" layoutY="308.0" mnemonicParsing="false" onAction="#btnPunto" prefHeight="45.0" prefWidth="44.0" text=".">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="setea" layoutX="90.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnAc" prefHeight="45.0" prefWidth="44.0" text="AC" />
+      <Button fx:id="del1" layoutX="34.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnC" prefHeight="45.0" prefWidth="44.0" text="C" textFill="#403939">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Button>
+      <Button fx:id="negative" layoutX="146.0" layoutY="308.0" mnemonicParsing="false" onAction="#btnINegative" prefHeight="45.0" prefWidth="44.0" text="Neg" />
+   </children>
+</Pane>
