@@ -1,4 +1,3 @@
-package JDBC_PSTMT_V1;
 
 
 import java.sql.Connection;

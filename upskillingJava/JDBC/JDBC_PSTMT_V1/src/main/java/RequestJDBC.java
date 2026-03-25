@@ -1,4 +1,4 @@
-package JDBC_PSTMT_V1;
+
 
 
 
@@ -15,7 +15,7 @@ public class RequestJDBC {
     //METODO CONSTRUCTOR
     public RequestJDBC()
     {
-        this.cnn=ConnectionJDBC.getInstance().getConnectionJDBC();
+        this.cnn= JDBC_PSTMT_V1.ConnectionJDBC.getInstance().getConnectionJDBC();
     }
 
 

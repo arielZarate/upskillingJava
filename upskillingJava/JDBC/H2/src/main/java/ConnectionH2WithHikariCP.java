@@ -18,9 +18,20 @@ public class ConnectionH2WithHikariCP {
     public static void main(String[] args) {
 
 
+        //agrego la consola h2 a mi main
+
+
+        try {
+            // 🔥 Levanta consola web
+            org.h2.tools.Server.createWebServer("-web", "-webPort", "8082").start();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         HikariConfig hc = new HikariConfig();
 
-        hc.setJdbcUrl("jdbc:h2:mem:testdb");
+        hc.setJdbcUrl("jdbc:h2:./test_db;DB_CLOSE_DELAY=-1"); //evita que la BD se destruya al cerrar conexión
         hc.setUsername("sa");
         hc.setPassword("");
 
@@ -80,9 +91,14 @@ public class ConnectionH2WithHikariCP {
 
             System.out.println("registros insertados exitosamente en la tala usuarios y bd test");
 
+
+            Thread.sleep(1000000);
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
 
     }
@@ -105,4 +121,21 @@ public class ConnectionH2WithHikariCP {
 }
 
 
+/**
+ *
+ *
+ *🔥 Y ahora la consola gráfica funciona SIN vueltas
+ *
+ * Abrís:
+ *
+ * http://localhost:8082
+ *
+ * Y conectás con:
+ *
+ * jdbc:h2:./test_db
+ *
+ * ✔ sin TCP
+ * ✔ sin problemas de memoria
+ * ✔ persistente
+ * */
 
