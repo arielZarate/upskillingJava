@@ -1,4 +1,4 @@
-package JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.Capa_Persistencia;
+package Capa_Persistencia;
 
 import java.util.List;
 

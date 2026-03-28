@@ -1,13 +1,14 @@
-package JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.Capa_Persistencia;
+package Capa_Persistencia;
 
 
 
 
 
-import JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.Capa_Datos.User;
-import JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.Capa_Datos.UserDTO;
-import JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.Capa_Datos.UserMapper;
-import JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.config.ConnectionJDBC;
+
+import Capa_Datos.User;
+import Capa_Datos.UserDTO;
+import Capa_Datos.UserMapper;
+import config.ConnectionJDBC;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

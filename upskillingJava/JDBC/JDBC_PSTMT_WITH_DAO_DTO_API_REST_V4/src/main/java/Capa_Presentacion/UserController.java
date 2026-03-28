@@ -1,9 +1,8 @@
-package JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.Capa_Presentacion;
+package Capa_Presentacion;
 
-
-import JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.Capa_Datos.UserDTO;
-import JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.Capa_Persistencia.UserDAO;
-import JDBC_PSTMT_WITH_DAO_DTO_API_REST_V4.Capa_Persistencia.UserDAOImpl;
+import Capa_Datos.UserDTO;
+import Capa_Persistencia.UserDAO;
+import Capa_Persistencia.UserDAOImpl;
 
 
 import com.google.gson.Gson;

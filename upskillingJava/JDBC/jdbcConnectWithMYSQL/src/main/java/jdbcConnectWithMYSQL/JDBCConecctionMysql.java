@@ -2,9 +2,7 @@ package jdbcConnectWithMYSQL;
 
 import java.sql.*;
 
-public class JDBCConecction {
-
-
+public class JDBCConecctionMysql {
 
 
     public static void main(String[] args) {
@@ -34,8 +32,6 @@ public class JDBCConecction {
                     "id INT AUTO_INCREMENT PRIMARY KEY,  " +
                     "name VARCHAR(50)) ";
             stemen.executeUpdate(createTableQuery);
-
-
 
 
 
