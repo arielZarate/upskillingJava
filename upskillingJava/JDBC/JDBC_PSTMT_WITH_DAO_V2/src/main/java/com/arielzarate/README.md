@@ -77,12 +77,12 @@ public interface UserDAO {
 }
 
 ```
- LA IMPLEMENTACON DE DAO 
+ LA IMPLEMENTACON DE DAO
 
 ```java
 package JDBC_PSTMT_WITH_DAO_V2.models;
 
-import JDBC_PSTMT_WITH_DAO_V2.db.ConnectionDB;
+import ConnectionDB;
 import JDBC_PSTMT_WITH_DAO_V2.interfaces.UserDAO;
 
 import java.sql.Connection;
@@ -94,48 +94,47 @@ import java.util.List;
 //import java.util.Random;
 //import static java.lang.Math.random;
 
-public class UserDAOImpl  implements UserDAO {
+public class UserDAOImpl implements UserDAO {
     Connection cnn;
 
-  String TABLE_USERS="usuarios";
+    String TABLE_USERS = "usuarios";
 
 
     //metodo publico crea la instancia y queda disponible para usarse
-    public UserDAOImpl(){
-        this.cnn= ConnectionDB.getInstance().getConnection();
+    public UserDAOImpl() {
+        this.cnn = ConnectionDB.getInstance().getConnection();
     }
 
 
-  //==================create table users=====================================
-    public void createTable(){
-        String createTableQuery="CREATE TABLE IF NOT EXISTS " +TABLE_USERS+ " "+
+    //==================create table users=====================================
+    public void createTable() {
+        String createTableQuery = "CREATE TABLE IF NOT EXISTS " + TABLE_USERS + " " +
                 "(id INT AUTO_INCREMENT PRIMARY KEY,  " +
-                "name VARCHAR(50))" ;
+                "name VARCHAR(50))";
 
 
-        try(PreparedStatement pstmt= cnn.prepareStatement(createTableQuery)){
+        try (PreparedStatement pstmt = cnn.prepareStatement(createTableQuery)) {
             pstmt.executeUpdate();
             System.out.println("tabla creada");
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("error para crear tabla: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
 
-
-   //================INSERT USER===================
+    //================INSERT USER===================
     @Override
     public int insertUser(User user) {
-        String sql_insert="INSERT INTO "+ TABLE_USERS + " (name) VALUES(?) ";
+        String sql_insert = "INSERT INTO " + TABLE_USERS + " (name) VALUES(?) ";
 
-        int rowsAffected=0;
-        try(PreparedStatement pstmt= cnn.prepareStatement(sql_insert)){
-            pstmt.setString(1,user.getName());
-            rowsAffected=pstmt.executeUpdate();
+        int rowsAffected = 0;
+        try (PreparedStatement pstmt = cnn.prepareStatement(sql_insert)) {
+            pstmt.setString(1, user.getName());
+            rowsAffected = pstmt.executeUpdate();
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("error para crear usuario: " + e.getMessage());
             e.printStackTrace();
         }
@@ -149,22 +148,20 @@ public class UserDAOImpl  implements UserDAO {
     //===========findById============================
     @Override
     public User findUserById(int id) {
-        String sql="SELECT * FROM " +TABLE_USERS + " WHERE id=?";
-        User user=null;
-        try(PreparedStatement pstmt=cnn.prepareStatement(sql)){
+        String sql = "SELECT * FROM " + TABLE_USERS + " WHERE id=?";
+        User user = null;
+        try (PreparedStatement pstmt = cnn.prepareStatement(sql)) {
 
-            pstmt.setInt(1,id);
-            ResultSet res=   pstmt.executeQuery();
-            while(res.next())
-            {
-               // System.out.println("Nombre :" +  res.getString("name"));
+            pstmt.setInt(1, id);
+            ResultSet res = pstmt.executeQuery();
+            while (res.next()) {
+                // System.out.println("Nombre :" +  res.getString("name"));
                 // en vez de mostrar un sout de aca devolvere los datos del User en su metodo toSring()
-             user=new User(); //creo un usuario con constructor sin parametros
-             user.setId(res.getInt("id"));
-             user.setName(res.getString("name"));
+                user = new User(); //creo un usuario con constructor sin parametros
+                user.setId(res.getInt("id"));
+                user.setName(res.getString("name"));
             }
-        }catch(SQLException e)
-        {
+        } catch (SQLException e) {
             System.out.println("Error al actualizar usuario ");
             e.printStackTrace();
         }
@@ -173,24 +170,22 @@ public class UserDAOImpl  implements UserDAO {
     }
 
 
-
     // ===============findAll====================0
     @Override
     public List<User> findAll() {
-    String sql_findall="SELECT * FROM " +TABLE_USERS;
-     List <User> list_users=new ArrayList<User>();
-        try(
+        String sql_findall = "SELECT * FROM " + TABLE_USERS;
+        List<User> list_users = new ArrayList<User>();
+        try (
                 PreparedStatement pstmt = cnn.prepareStatement(sql_findall);
                 ResultSet res = pstmt.executeQuery();
-        )
-        {
+        ) {
             //ahora itero
             while (res.next()) {
-              //  System.out.println("ID:" + res.getInt("id")+ " "+ "Nombre: " + res.getString("name") );
-             User user=new User();
-             user.setId(res.getInt("id"));
-             user.setName(res.getString("name"));
-             list_users.add(user);
+                //  System.out.println("ID:" + res.getInt("id")+ " "+ "Nombre: " + res.getString("name") );
+                User user = new User();
+                user.setId(res.getInt("id"));
+                user.setName(res.getString("name"));
+                list_users.add(user);
             }
 
 
@@ -206,37 +201,35 @@ public class UserDAOImpl  implements UserDAO {
     @Override
     public int updateUser(int id, User user) {
         String sql_check = "SELECT COUNT(*) FROM " + TABLE_USERS + " WHERE id=?";
-        String sql_update="UPDATE " +TABLE_USERS+" SET name=? WHERE id=?";
-        int rows_affected=0;
-        try(PreparedStatement pstmt= cnn.prepareStatement(sql_update))
-        {
+        String sql_update = "UPDATE " + TABLE_USERS + " SET name=? WHERE id=?";
+        int rows_affected = 0;
+        try (PreparedStatement pstmt = cnn.prepareStatement(sql_update)) {
 
-                // Usuario existe, proceder con la actualización
-                pstmt.setString(1, user.getName());
-                pstmt.setInt(2, id);
-                rows_affected = pstmt.executeUpdate();
+            // Usuario existe, proceder con la actualización
+            pstmt.setString(1, user.getName());
+            pstmt.setInt(2, id);
+            rows_affected = pstmt.executeUpdate();
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("error para aptualizar : " + e.getMessage());
             e.printStackTrace();
 
         }
-       //solo retorno las filas afectadas
+        //solo retorno las filas afectadas
         return rows_affected;
     }
 
     @Override
     public int deleteUser(int id) {
-        String sql="DELETE FROM " +TABLE_USERS+"  WHERE id=?";
-        int rowsAffected=0;
-        try(PreparedStatement pstmt=cnn.prepareStatement(sql)){
+        String sql = "DELETE FROM " + TABLE_USERS + "  WHERE id=?";
+        int rowsAffected = 0;
+        try (PreparedStatement pstmt = cnn.prepareStatement(sql)) {
 
             //pstmt.setString(1,name);
-            pstmt.setInt(1,id);
-            rowsAffected=   pstmt.executeUpdate();
+            pstmt.setInt(1, id);
+            rowsAffected = pstmt.executeUpdate();
 
-        }catch(SQLException e)
-        {
+        } catch (SQLException e) {
             System.out.println("Error al actualizar usuario ");
             e.printStackTrace();
         }
@@ -245,19 +238,16 @@ public class UserDAOImpl  implements UserDAO {
     }
 
 
-    public void CloseConnection(){
-        try
-      {
-          if(cnn != null)
-          {
-              cnn.close();
-              System.out.println("conexion cerrada ");
-          }
-      }
-      catch (SQLException e){
-          System.out.println("Error al cerrar conexion de JDBC ");
-          e.printStackTrace();
-      }
+    public void CloseConnection() {
+        try {
+            if (cnn != null) {
+                cnn.close();
+                System.out.println("conexion cerrada ");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al cerrar conexion de JDBC ");
+            e.printStackTrace();
+        }
 
     }
 

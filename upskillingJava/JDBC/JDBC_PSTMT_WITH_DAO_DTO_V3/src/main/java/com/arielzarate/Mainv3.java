@@ -1,8 +1,8 @@
-package JDBC_PSTMT_WITH_DAO_DTO_V3;
+package com.arielzarate;
 
 
 
-import JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Presentacion.UserController;
+import com.arielzarate.Capa_Presentacion.UserController;
 
 public class Mainv3 {
 

@@ -11,8 +11,8 @@ public class RequestJDBC {
     final String USER_TABLE = "usuarios";
 
     //METODO CONSTRUCTOR
-    public RequestJDBC() {
-        this.cnn = ConnectionJDBC.getInstance().getConnectionJDBC();
+    public RequestJDBC()  {
+        this.cnn = JDBCSingleton.getInstance().getConnection();
     }
 
 

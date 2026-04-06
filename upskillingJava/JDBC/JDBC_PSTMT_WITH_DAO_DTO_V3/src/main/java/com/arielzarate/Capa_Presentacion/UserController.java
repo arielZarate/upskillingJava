@@ -1,8 +1,7 @@
-package JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Presentacion;
+package com.arielzarate.Capa_Presentacion;
 
-import JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Datos.User;
-import JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Datos.UserDTO;
-import JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Persistencia.UserDAOImpl;
+import com.arielzarate.Capa_Datos.UserDTO;
+import com.arielzarate.Capa_Persistencia.UserDAOImpl;
 
 import java.util.List;
 import java.util.Scanner;
@@ -80,7 +79,7 @@ public class UserController {
 
     }
 
-//estosson los metodosa privados del menu
+//estos son los metodos  privados del menu
     private void showAllUsers()
     {
         System.out.println("Mostrando todos los usuarios: \n");
@@ -99,6 +98,10 @@ public class UserController {
         int idShow = scanner.nextInt();
         scanner.nextLine();  // Consumir el salto de línea
         UserDTO user= UserImpl.findUserById(idShow);
+        if(user==null){
+            throw new RuntimeException("Usuario no encontrado");
+        }
+
         System.out.println(user.toString());
 
     }

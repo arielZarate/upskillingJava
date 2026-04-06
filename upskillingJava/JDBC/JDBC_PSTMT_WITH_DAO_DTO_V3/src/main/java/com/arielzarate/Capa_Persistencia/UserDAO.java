@@ -1,9 +1,8 @@
-package JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Persistencia;
+package com.arielzarate.Capa_Persistencia;
 
 
 
-import JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Datos.User;
-import JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Datos.UserDTO;
+import com.arielzarate.Capa_Datos.UserDTO;
 
 public interface UserDAO extends GenericDAO<UserDTO> {
      //solo defino las firmas de los metodos que implementare

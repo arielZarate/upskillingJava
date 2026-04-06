@@ -1,23 +1,17 @@
-package JDBC_PSTMT_WITH_DAO_DTO_V3.config;
-
-import io.github.cdimascio.dotenv.Dotenv;
+package com.arielzarate.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConnectionJDBC {
 
-    // VARIABLES DE ENTORNO
 
-                                                                 // ruta del archivo .env java 2024/JDBC
 
-    ///media/ariel/ssd Datos_aux/Java/java 2024/JDBC/src/main/java/JDBC_PSTMT_WITH_DAO_DTO_V3
+    private  String url="jdbc:mysql://localhost:3306/test?useSSL=false&allowPublicKeyRetrieval=true";
+    private  String username="root"; //usuario de bd;
+    private  String password="admin";  //contraseña de bd
 
-    Dotenv dotenv=Dotenv.configure().directory("/media/ariel/ssd Datos_aux/Java/java 2024/JDBC/src/main/java/JDBC_PSTMT_WITH_DAO_DTO_V3/").load();
-    private  String url=dotenv.get("DB_URL");
-    private  String username=dotenv.get("DB_USERNAME");
-    private  String password=dotenv.get("DB_PASSWORD");
-    private static ConnectionJDBC instance=null;
+    private static volatile ConnectionJDBC instance=null;
 
 
      private ConnectionJDBC()

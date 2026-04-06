@@ -1,4 +1,4 @@
-package JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Datos;
+package com.arielzarate.Capa_Datos;
 
 public class UserMapper {
 

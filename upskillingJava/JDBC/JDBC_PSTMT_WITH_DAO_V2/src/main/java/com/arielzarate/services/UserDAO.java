@@ -1,13 +1,9 @@
-package JDBC_PSTMT_WITH_DAO_V2.interfaces;
+package com.arielzarate.services;
 
-import JDBC_PSTMT_WITH_DAO_V2.models.User;
-
+import com.arielzarate.models.User;
 import java.util.List;
 
 public interface UserDAO {
-
-    //solo defino las firmas de los metodos que implementare
-
 
     // ==========PATRON DAO====================
 

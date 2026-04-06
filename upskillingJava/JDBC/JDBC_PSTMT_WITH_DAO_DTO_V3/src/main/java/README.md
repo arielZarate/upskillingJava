@@ -57,7 +57,7 @@ Capa_Presentacion/
 En la creación de aplicaciones Java, generalmente se organiza el código en varias capas para separar las responsabilidades y facilitar el mantenimiento, la escalabilidad y la reutilización del código. Estas capas son:
 
 
- ![capa](./images/Capas.png)
+ ![capa](com/arielzarate/images/Capas.png)
 
 #### Capa de Presentación (Presentation Layer):
 

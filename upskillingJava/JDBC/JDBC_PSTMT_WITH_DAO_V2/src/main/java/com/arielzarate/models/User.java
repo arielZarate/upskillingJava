@@ -1,10 +1,9 @@
-package JDBC_PSTMT_WITH_DAO_V2.models;
+package com.arielzarate.models;
 
 public class User {
 
         private int id;
         private String name;
-      //  private String email;
 
 
     //constructor sin  parametros
@@ -22,8 +21,7 @@ public class User {
         public String getName() { return name; }
         public void setName(String name) { this.name = name; }
 
-       // public String getEmail() { return email; }
-       // public void setEmail(String email) { this.email = email; }
+
 
 
     @Override

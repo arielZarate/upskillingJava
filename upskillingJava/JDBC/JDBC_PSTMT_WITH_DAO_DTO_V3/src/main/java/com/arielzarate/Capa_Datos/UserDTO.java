@@ -1,4 +1,4 @@
-package JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Datos;
+package com.arielzarate.Capa_Datos;
 
 public class UserDTO {
 
@@ -11,7 +11,6 @@ public class UserDTO {
     public UserDTO() {}
 
     public UserDTO( String name, String lastName, int age, String email) {
-        //el id no va nunca lo generas solo la bd
         this.name = name;
         this.lastName = lastName;
         this.age = age;

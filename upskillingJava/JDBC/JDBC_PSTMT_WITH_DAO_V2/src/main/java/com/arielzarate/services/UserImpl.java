@@ -1,11 +1,7 @@
-package JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Persistencia;
+package com.arielzarate.services;
 
-
-
-import JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Datos.User;
-import JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Datos.UserDTO;
-import JDBC_PSTMT_WITH_DAO_DTO_V3.Capa_Datos.UserMapper;
-import JDBC_PSTMT_WITH_DAO_DTO_V3.config.ConnectionJDBC;
+import com.arielzarate.db.ConnectionDB;
+import com.arielzarate.models.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,15 +10,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDAOImpl  implements UserDAO {
+public class UserImpl implements UserDAO {
     Connection cnn;
 
-  String TABLE_USERS="users";
+  String TABLE_USERS="usuarios";
 
-
-    //metodo publico crea la instancia y queda disponible para usarse
-    public UserDAOImpl(){
-        this.cnn= ConnectionJDBC.getInstance().getConnectionJDBC();
+    public UserImpl(){
+        this.cnn=ConnectionDB.getInstance().getConnection();
     }
 
 
@@ -30,10 +24,7 @@ public class UserDAOImpl  implements UserDAO {
     public void createTable(){
         String createTableQuery="CREATE TABLE IF NOT EXISTS " +TABLE_USERS+ " "+
                 "(id INT AUTO_INCREMENT PRIMARY KEY,  " +
-                "name VARCHAR(50)," +
-                "lastName VARCHAR(50)," +
-                "age INT ," +
-                "email VARCHAR(50) )" ;
+                "name VARCHAR(50))" ;
 
 
         try(PreparedStatement pstmt= cnn.prepareStatement(createTableQuery)){
@@ -46,34 +37,16 @@ public class UserDAOImpl  implements UserDAO {
         }
     }
 
-  /// aca podria implementarse servicios , es decir llamar a los servicios que ejecutaras los sql
-    // podria usarese el patron Repository
-    //een vez de User -> UserDTO
+
 
    //================INSERT USER===================
     @Override
-    public int insertUser(UserDTO user_dto) {
-
-        // Validar los datos del DTO
-        try {
-            user_dto.validate();
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error de validación: " + e.getMessage());
-            return 0; // O manejar el error de otra manera
-        }
-
-
-        // aca mapeo la entidad
-        User user= UserMapper.toEntity(user_dto);
-
-        String sql_insert="INSERT INTO "+ TABLE_USERS + " (name,lastName,age, email) VALUES(?,?,?,?) ";
+    public int insertUser(User user) {
+        String sql_insert="INSERT INTO "+ TABLE_USERS + " (name) VALUES(?) ";
 
         int rowsAffected=0;
         try(PreparedStatement pstmt= cnn.prepareStatement(sql_insert)){
             pstmt.setString(1,user.getName());
-            pstmt.setString(2,user.getLastName());
-            pstmt.setInt(3,user.getAge());
-            pstmt.setString(4,user.getEmail());
             rowsAffected=pstmt.executeUpdate();
 
         }catch (SQLException e){
@@ -89,8 +62,7 @@ public class UserDAOImpl  implements UserDAO {
 
     //===========findById============================
     @Override
-    public UserDTO findUserById(int id) {
-
+    public User findUserById(int id) {
         String sql="SELECT * FROM " +TABLE_USERS + " WHERE id=?";
         User user=null;
         try(PreparedStatement pstmt=cnn.prepareStatement(sql)){
@@ -104,9 +76,6 @@ public class UserDAOImpl  implements UserDAO {
              user=new User(); //creo un usuario con constructor sin parametros
              user.setId(res.getInt("id"));
              user.setName(res.getString("name"));
-             user.setLastName(res.getString("lastName"));
-             user.setAge(res.getInt("age"));
-             user.setEmail(res.getString("email"));
             }
         }catch(SQLException e)
         {
@@ -114,18 +83,16 @@ public class UserDAOImpl  implements UserDAO {
             e.printStackTrace();
         }
 
-        return user !=null ?UserMapper.toDTO(user):null;
-
-
+        return user;
     }
 
 
 
     // ===============findAll====================0
     @Override
-    public List<UserDTO> findAll() {
+    public List<User> findAll() {
     String sql_findall="SELECT * FROM " +TABLE_USERS;
-     List <UserDTO> list_users=new ArrayList<UserDTO>();
+     List <User> list_users=new ArrayList<User>();
         try(
                 PreparedStatement pstmt = cnn.prepareStatement(sql_findall);
                 ResultSet res = pstmt.executeQuery();
@@ -137,12 +104,7 @@ public class UserDAOImpl  implements UserDAO {
              User user=new User();
              user.setId(res.getInt("id"));
              user.setName(res.getString("name"));
-             user.setLastName(res.getString("lastName"));
-             user.setAge(res.getInt("age"));
-             user.setEmail(res.getString("email"));
-
-             //agrego los elementos a la lista
-             list_users.add(UserMapper.toDTO(user));
+             list_users.add(user);
             }
 
 
@@ -156,28 +118,16 @@ public class UserDAOImpl  implements UserDAO {
     }
 
     @Override
-    public int updateUser(int id, UserDTO userdto) {
-
-        // Validar los datos del DTO
-        try {
-            userdto.validate();
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error de validación: " + e.getMessage());
-            return 0; // O manejar el error de otra manera
-        }
-
-        User user=UserMapper.toEntity(userdto);
-        String sql_update="UPDATE " +TABLE_USERS+" SET name=? ,lastName=?, age=?, email=? WHERE id=?";
+    public int updateUser(int id, User user) {
+        String sql_check = "SELECT COUNT(*) FROM " + TABLE_USERS + " WHERE id=?";
+        String sql_update="UPDATE " +TABLE_USERS+" SET name=? WHERE id=?";
         int rows_affected=0;
         try(PreparedStatement pstmt= cnn.prepareStatement(sql_update))
         {
 
                 // Usuario existe, proceder con la actualización
                 pstmt.setString(1, user.getName());
-                pstmt.setString(2, user.getLastName());
-                pstmt.setInt(3, user.getAge());
-                pstmt.setString(4, user.getEmail());
-                pstmt.setInt(5, id);
+                pstmt.setInt(2, id);
                 rows_affected = pstmt.executeUpdate();
 
         }catch (SQLException e){

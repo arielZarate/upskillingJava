@@ -1,16 +1,14 @@
-package JDBC_PSTMT_WITH_DAO_V2;
-
-import JDBC_PSTMT_WITH_DAO_V2.models.UserDAOImpl;
-
+package com.arielzarate;
+import com.arielzarate.models.User;
+import com.arielzarate.services.UserImpl;
 import java.util.List;
-import JDBC_PSTMT_WITH_DAO_V2.models.User;
 import java.util.Scanner;
 
 public class MainV2 {
 
     public static void main(String[] args) {
-        UserDAOImpl requestJDBC=new UserDAOImpl();
-        requestJDBC.createTable();  //creo las talas por defecto apenas inicia el programa por si acaso
+        UserImpl requestJDBC=new UserImpl();
+        requestJDBC.createTable();
         int opcion;
         Scanner scanner = new Scanner(System.in);
         do{
@@ -33,7 +31,6 @@ public class MainV2 {
                      List <User> users=requestJDBC.findAll();  //esto me devuelve una lista
                     for(User u: users)
                     {
-                        //debo mostrarlos con sout
                         System.out.println(u.toString());
                     }
                     break;
